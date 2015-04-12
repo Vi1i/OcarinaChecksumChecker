@@ -20,6 +20,9 @@ int main(int argc, char **argv){
     
     unsigned int checksum = uShort(buffer, size);
 
+    //This is anding the value to only get the 4 byte answer we need
+    checksum = checksum & 0x00ffff;
+
     printf("0x%X\n", checksum); //4dc5
 
     return 0;
